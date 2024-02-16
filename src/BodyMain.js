@@ -1,6 +1,6 @@
-import {useEffect, useState} from "react";
+import { useEffect, useState } from "react";
 import RepositoryCard from "./repositoryCard";
-import { Col, Row, Card,  Button, Input,Modal } from "antd";
+import { Col, Row, Card, Button, Input, Modal } from "antd";
 import {
   SettingOutlined,
   FunnelPlotOutlined,
@@ -20,39 +20,39 @@ function BodyPage() {
     { topic: "Aws-verified", color: "Cyan", count: "3 +" },
     { topic: "Id", color: "Gray", count: "6227 +" },
   ];
-  const[getArrayCategories,setArrayCategories]=useState(Categories)
-  const[getArrayCategoriesDuplicate,setArrayCategoriesDuplicate]=useState(Categories)
-  const[repository,setRepository]= useState([])
-  const[getModal,setModal]=useState({
-    name:'',
-    visible:false,
-    count:0
+  const [getArrayCategories, setArrayCategories] = useState(Categories)
+  const [getArrayCategoriesDuplicate, setArrayCategoriesDuplicate] = useState(Categories)
+  const [repository, setRepository] = useState([])
+  const [getModal, setModal] = useState({
+    name: '',
+    visible: false,
+    count: 0
   });
-  const handleClick=(name,count)=>{
+  const handleClick = (name, count) => {
     setModal({
-      name:name,
-      visible:true,
-      count:count
+      name: name,
+      visible: true,
+      count: count
     })
   }
-  const handleCancel =()=>{
+  const handleCancel = () => {
     setModal({
-      name:'',
-      visible:false,
-      count:0
+      name: '',
+      visible: false,
+      count: 0
     })
   }
-  const handleSearch=(e)=>{
-   let value = e.target.value;
-   let filteredData = getArrayCategoriesDuplicate.filter(i=>i.topic.toLowerCase().includes(value))
-   setArrayCategories(filteredData)
+  const handleSearch = (e) => {
+    let value = e.target.value;
+    let filteredData = getArrayCategoriesDuplicate.filter(i => i.topic.toLowerCase().includes(value))
+    setArrayCategories(filteredData)
   }
 
-  useEffect(()=>{
+  useEffect(() => {
     fetch("https://aws-backend-hvr5.onrender.com/")
-    .then((res)=>res.json())
-    .then((data)=>setRepository(data));
-  },[])
+      .then((res) => res.json())
+      .then((data) => setRepository(data));
+  }, [])
   return (
     <div>
       <Row>
@@ -65,7 +65,7 @@ function BodyPage() {
           }}
         >
           <div style={{ marginBottom: "3%" }}>
-            <Search placeholder="Search" onChange={(e)=>handleSearch(e)}  onSearch={(e)=>handleSearch(e)} />
+            <Search placeholder="Search" onChange={(e) => handleSearch(e)} onSearch={(e) => handleSearch(e)} />
           </div>
           <div>
             {(getArrayCategories || []).map((i) => {
@@ -76,7 +76,7 @@ function BodyPage() {
                     style={{
                       background: "#f0f0f4",
                     }}
-                    onClick={()=>handleClick(i.topic,i.count)}
+                    onClick={() => handleClick(i.topic, i.count)}
                   >
                     <Row>
                       <Col span={1} style={{ background: `${i.color}` }}></Col>
@@ -135,66 +135,69 @@ function BodyPage() {
             </Col>
           </Row>
           <Row
-           style={{
-            height: "9vh",
-            background: "white",
-            display: "flex",
-            alignItems: "center",
-            border: "1px solid #e8e8f6",
-          }}
+            style={{
+              height: "9vh",
+              background: "white",
+              display: "flex",
+              alignItems: "center",
+              border: "1px solid #e8e8f6",
+            }}
           >
             <Col span={18}></Col>
             <Col span={6}
-            style={{
-              display: "flex",
-              alignItems: "center",
-            }}
-          >
-            <div>6,227 results</div>
-            <div>
-              <Button style={{ background: "White", color: "Black" }}>
-               Orginal order
-              </Button>
-            </div>
+              style={{
+                display: "flex",
+                alignItems: "center",
+              }}
+            >
+              <div>6,227 results</div>
+              <div>
+                <Button style={{ background: "White", color: "Black" }}>
+                  Orginal order
+                </Button>
+              </div>
             </Col>
 
           </Row>
-        <Row>
-          <Col span={1}></Col>
-          <Col span={23}>
-          <div>
-              {repository.map((item)=>{
-               return <RepositoryCard value={item}/>
+          <Row>
+            <Col span={1}></Col>
+            <Col span={23}>
+              <div>
+                {repository.map((item) => {
+                  return <RepositoryCard
+                    style={{ overflow: "scroll" }}
+                    value={item}
+                  />
 
-              })}
-            
-            </div>
+                })}
+
+              </div>
             </Col>
-          </Row>     
+          </Row>
         </Col>
       </Row>
 
-      {getModal.visible == true&&(
+      {getModal.visible == true && (
         <div>
           <Modal
-          title={getModal.name}
-          open={true}
-          onCancel={handleCancel}
-          width='70%'
+            title={getModal.name}
+            open={true}
+            onCancel={handleCancel}
+            width='70%'
           >
-          <div style={{display:'flex'}} >
-            <span>
-            <Search placeholder="input search text"
-             // onSearch={onSearch}
-             style={{
-             width: 300,
-             }}
-             />
-            </span>
-            <span style={{fontSize:'large'}} >
-            <SettingOutlined />
-            </span>
-          </div>
+            <div style={{ display: 'flex' }} >
+              <span>
+                <Search placeholder="input search text"
+                  // onSearch={onSearch}
+                  style={{
+                    width: 300,
+                  }}
+                />
+              </span>
+              <span style={{ fontSize: 'large' }} >
+                <SettingOutlined />
+              </span>
+            </div>
           </Modal>
         </div>
       )}
