@@ -12,14 +12,9 @@ import insights from './images/insights.png'
 function NavbarPage() {
   let navigate = useNavigate()
   const onCliclPolymerScreen=()=>{
-    const newWindow = window.open('/auth/login', '_blank');
-    if (newWindow) {
-      // Navigate in the new window
-      newWindow.location.href = '/auth/login';
-    } else {
-      // Handle popup blocker or other issues
+    
       navigate('/auth/login');
-    }
+    
   }
   return (
     <div>
