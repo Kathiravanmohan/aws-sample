@@ -8,6 +8,7 @@ import { useNavigate } from 'react-router-dom';
 import polymer from '../images/polymer.png'
 import google_logo from '../images/google_logo.png'
 import facebook_logo from '../images/facebook_logo.jpeg'
+import { Link } from 'react-router-dom';
 
 function SignIn() {
   
@@ -74,7 +75,7 @@ function SignIn() {
       </Button>
 
       <div className="switch-auth-label mb-5">
-                     Don't have an account <a href="/auth/register" >Register</a></div>
+                     Don't have an account <Link to="/auth/register">Register</Link></div>
 
                       <p  className="tos-notice">
                       By signing up, you agree to the <a href="https://www.polymersearch.com/terms-of-service" target="_blank" rel="noreferrer">
