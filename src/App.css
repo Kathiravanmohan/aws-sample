@@ -1,0 +1,221 @@
+.container-fulid{
+
+    background-color: #f0f0f0;
+    font-family: sans-serif;
+}
+
+.container-login{
+    
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.facebook_button{background: #4267b2;
+  color: #fff;
+  border-radius: 6px;
+  border: 1px solid #e3e7ef;
+  justify-content: center;
+  padding: 10px;
+  height: 48px;
+  width: 400px;
+  text-decoration: none;
+  text-align: center;
+  
+}
+
+.google-btn{
+    background: #fff;
+  color: #60636c;
+  border-radius: 6px;
+  border: 1px solid #e3e7ef;
+  justify-content: center;
+  margin-right: 1.5rem;
+  height: 48px;
+  padding: 8px;
+  width: 400px;
+  text-align: center;
+  
+  margin-top: 20px;
+}
+
+  .buttons{letter-spacing: -.02em;
+  width: 100%;
+  display: flex;
+  
+  align-items: center;
+  margin-top: 10px;
+  transition: .5s;}
+
+ 
+
+    .welcome{
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        margin-top: 150px;
+    }
+
+    .register{
+        
+            color: #fff;
+            border-radius: 6px;
+            border: 1px solid #e3e7ef;
+            justify-content: center;
+            padding: 10px;
+            height: 48px;
+            width: 400px;
+            text-decoration: none;
+            text-align: center;
+            
+          
+    }
+
+
+   .switch-auth-label{ 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: .75rem;
+    color: #60636c;
+    font-size: 13px
+   }
+    .mb-3{
+        width: 400px;
+    }
+
+    .tos-notice{
+        text-align: center;
+    }
+    
+    .auth-separator {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin: 1.5em 0;
+        color: silver;
+        font-size: 12px;
+    }      
+
+    .line {
+        width: 42%;
+        background: #e3e7ef;
+        height: 1px;
+      }
+
+      .google-logo{
+        height: 3cap;
+      }
+
+      .line-seperator{
+        width: 100%;
+        background: #e3e7ef;
+        height: 1px;
+      }
+
+      .insight-logo{
+        height: 2cap
+      }
+
+      .scroll{
+        width: 300px;
+        height: 200px;
+        overflow-y: scroll;
+      }
+
+      .scroll::-webkit-scrollbar {
+        width: 10px;
+      }
+
+      .scroll::-webkit-scrollbar-thumb {
+        background-color: #888;
+        border-radius: 5px;
+      }
+
+      .scroll::-webkit-scrollbar-track {
+        background-color: #eee;
+        color: rgb(15, 235, 34);
+      }
+      
+  .add-source-button{
+   
+      background: #dbeee4;
+    border-radius: 6px;
+    border: 1px solid #e3e7ef;
+    justify-content: center;
+    margin-right: 1.5rem;
+    height: 30px;
+    padding: 8px;
+    width: 100%;
+    text-align: center;
+    font-size: medium;
+    margin-top: 20px;
+    margin-left: 15px;
+    font-family: sans-serif;
+    font-weight: bolder;
+    color: black;
+    align-items: center;
+  }
+  
+  .name{
+    font-family: sans-serif;
+    font-weight: bolder;
+  }
+
+  .item{
+    border-radius: 6px;
+    border: 1px solid #e3e7ef;
+  font-size: 14px;
+  text-overflow: ellipsis;
+  display: inline-block;
+  width: calc(100% - 48px);
+  white-space: nowrap;
+  overflow: hidden;
+  padding: 10px;
+  margin-left: 20px;
+  cursor: default;
+  background: rgba(227,231,239,.301961)
+}
+ 
+.item-logo{
+  height: 2cap;
+}
+.item-bottom{
+  border-radius: 6px;
+  border: 1px solid #e3e7ef;
+  margin-left: 20px;
+  display: flex;
+  justify-content: flex-end;
+  font-size: 14px;
+  text-overflow: ellipsis;
+  display: inline-block;
+  width: calc(100% - 48px);
+  white-space: nowrap;
+  overflow: hidden;
+  padding: 10px;
+  cursor: default;
+  background: rgba(227,231,239,.301961)
+}
+
+.content {
+  padding-bottom: 50px;
+  margin-top: 350px;
+}
+
+.polymer-explorer-top-bar {
+  background-color: #fff;
+  border-bottom: 1px solid rgba(227,231,239,.698039);
+  padding: 12px 24px;
+width: 100%
+}
+
+  .search{
+   margin-left: 70%;
+   }
+
+   .item:hover{
+  background-color: black;
+  color: #eee;
+   }

@@ -1,26 +1,28 @@
-import { Flex } from 'antd';
+
 import React from 'react'
 import { Card, CardBody, CardTitle } from 'reactstrap';
 import { Col, Row } from "antd";
 import './index'
-import { Link } from 'react-router-dom';
 
 function RepositoryCard({ value }) {
     return (
         <Card
             style={{
                 width: "300px",
-                height: "300px",
+                height: "350px",
                 display: "flex",
                 flexWrap: "wrap",
                 float: "left",
                 marginTop: '15px',
                 marginBottom: "15px",
-                marginRight: "2%"
+                marginRight: "2%",
+                
             }
             }>
             <CardBody>
-                <CardTitle><h5>{value.Repository}</h5></CardTitle>
+                <CardTitle><h5><a  href={value.GitUrl} target="_blank" className="d-inline-flex text-dark align-items-center" rel="noreferrer"> 
+                    <span > {value.Repository}</span> </a></h5></CardTitle>
+                <div className="auth-separator"><div className="line-seperator"></div></div>
                 <a style={{ opacity: "0.5", fontSize: "13px" }}>{value.Description}</a>
                 <Row>
 

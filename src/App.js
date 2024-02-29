@@ -1,24 +1,35 @@
 import React from "react";
-import { Col, Row } from "antd";
 
-import NavbarPage from "./NavbarMain";
-import BodyPage from "./BodyMain";
+import SignIn from "./Login/SignIn";
+import Signup from "./Login/Signup";
+
+import Dashboard from "./Login/Dashboard";
+
+import { BrowserRouter,Route,Routes, Switch } from "react-router-dom";
+import Workspace from "./Workspace";
+import Allapp from "./Workspace_components/Allapp";
+
 
 function App() {
-  return (
-    <div>
-      <Row style={{ height: "10vh" }} >
-        <Col span={24} >
-          <NavbarPage />
-        </Col>
-      </Row>
-      <Row style={{ height: "80vh" }} >
-        <Col span={24} >
-          <BodyPage />
-        </Col>
-      </Row>
-    </div>
-  );
+  
+  return <>
+    
+
+    <BrowserRouter>
+    <Routes>
+     
+    
+     <Route path="/auth/login" element={<SignIn/>}/>
+     <Route path="/auth/register" element={<Signup/>}/>
+     <Route path="/workspace" element={<Workspace/>}/>
+     <Route path="/" element={<Dashboard/>}/>
+    
+     <Route path="/workspace/allapp" Component={Allapp} />
+     
+    </Routes>
+    
+    </BrowserRouter>
+  </>
 }
 
 export default App;

@@ -1,20 +1,31 @@
 import React from "react";
-import { Col, Row, Card, Space, Button } from "antd";
+import { Col, Row, Card, Button } from "antd";
 import {
   UserAddOutlined,
   SettingOutlined,
   BranchesOutlined,
 } from "@ant-design/icons";
+import { useNavigate } from "react-router-dom";
+import awsSymbol from './images/awsSymbol.png'
+import insights from './images/insights.png'
 
 function NavbarPage() {
+  let navigate = useNavigate()
   const onCliclPolymerScreen=()=>{
-    window.open('https://app.polymersearch.com/auth/register', '_blank');
+    const newWindow = window.open('/auth/login', '_blank');
+    if (newWindow) {
+      // Navigate in the new window
+      newWindow.location.href = '/auth/login';
+    } else {
+      // Handle popup blocker or other issues
+      navigate('/auth/login');
+    }
   }
   return (
     <div>
       <Row style={{ height: "10vh", border: "1px solid #e8e8f6" }}>
         <Col span={1} style={{ display: "flex", alignItems: "center" }}>
-          <img src='/images/awsSec.png' alt="AWS" />
+          <img src={awsSymbol}  alt="AWS" className='google-logo' />
         </Col>
         <Col
           span={5}
@@ -46,7 +57,7 @@ function NavbarPage() {
             justifyContent: "center",
           }}
         >
-          <Button shape="round" >
+          <Button shape="round" ><img src={insights}  alt="insight" className='insight-logo' />
             Insights
           </Button>
             <Button shape="round" style={{color:'white',background:'black'}} >
