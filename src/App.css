@@ -219,3 +219,97 @@ width: 100%
   background-color: black;
   color: #eee;
    }
+
+   .outer{
+    background-color: rgba(227,231,239,.2);
+  border: 1px dashed #cacbd0;
+  border-radius: 6px;
+   }
+
+   .inner{
+    height: 800px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+   }
+
+   .padding{
+    padding-bottom: 0%;
+    padding-top: 30px;
+    padding-left: 100px;
+    padding-right: 100px;
+   }
+
+   .category {
+    margin-right: 12px;
+    --tw-text-opacity: 1;
+    color: rgb(144 146 152 / var(--tw-text-opacity));
+    line-height: 15px;
+    font-size: 12px;
+    cursor: pointer;
+    transition: opacity .3s;
+    padding: 5px 6px;
+  }
+  
+  .justify-between {
+    display: flex;
+     
+  }
+  
+  .card-connector {
+    width: 200px;
+    height: 350px;
+    border-radius: 6px;
+    background: #F7F8FA;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1.5rem;
+    cursor: pointer;
+}
+
+.connectimg{
+  height: 72px;
+  margin-bottom: 18px;
+}
+
+.card-container{
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 1.5rem 0;
+  min-height: 400px;
+  margin-top: 40px;
+  gap: 20px;
+}
+
+.card-button{
+  width: 150px;
+  height: 50px;
+  text-align: center;;
+}
+
+.logout {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  border-radius: 6px;
+  text-align: center;
+  font-family: 'Times New Roman', Times, serif;
+  height: 30px;
+  width: 70px;
+}
+.page{
+  text-align: justify;
+  justify-content: center;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 100px;
+  background-color: antiquewhite;
+  padding: 25px
+}

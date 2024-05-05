@@ -6,8 +6,8 @@ import Signup from "./Login/Signup";
 import Dashboard from "./Login/Dashboard";
 
 import { BrowserRouter, Route, Routes} from "react-router-dom";
-import Workspace from "./Workspace";
 
+import FinalWorkspace from "./Login/FinalWorkspace";
 
 
 function App() {
@@ -20,12 +20,13 @@ function App() {
      
      <Route path="/auth/login" element={<SignIn/>}/>
      <Route path="/auth/register" element={<Signup/>}/>
-     <Route path="/workspace" element={<Workspace/>}/>
+      <Route path="/workspace" element={<FinalWorkspace/>}/>
      <Route path="/" element={<Dashboard/>}/>
      
     </Routes>
     
     </BrowserRouter>
+
   </>
 }
 
