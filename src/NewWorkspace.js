@@ -41,10 +41,13 @@ function NewWorkspace() {
   
 
   const logout = () => {
+    console.log("Logging out...");
     sessionStorage.removeItem('token');
+    console.log("Token removed");
     // Redirect to login page after logout
     window.location.href = "/auth/login";
-  };
+    console.log("Redirecting...");
+};
 
 
   const mapImage = (imageName) => {
